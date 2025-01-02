@@ -46,9 +46,15 @@ The project consists of the following modules:
 
 1. Compile the project:
    ```
-   javac -d out src/main/java/unruly/*.java
+   javac -d out src/unruly/*.java
    ```
 2. Run the game solver:
    ```
    java -cp build unruly.Unruly
    ```
+
+3. Test the 2 examples by using the following files as input:
+
+**example1.txt**: An 8x8 board
+**example2.txt**: A 6x6 board
+
