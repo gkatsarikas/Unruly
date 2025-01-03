@@ -24,7 +24,6 @@ and solve it using a common search method.
 ## Requirements
 
 - **JDK**: Version 21 or later
-- **Build tool**: Apache Maven for dependency management and builds
 
 
 ## Project structure
@@ -46,11 +45,18 @@ The project consists of the following modules:
 
 1. Compile the project:
    ```
-   javac -d out src/unruly/*.java
+   javac -cp .:lib/* src/unruly/*.java src/tests/*.java -d bin
+ 
    ```
 2. Run the game solver:
    ```
-   java -cp build unruly.Unruly
+   java -cp bin unruly.Unruly
+   ```
+
+3. Run the Test class (optional):
+   ```
+   java -cp .:lib/*:bin org.junit.runner.JUnitCore FileInputOutputTest
+
    ```
 
 3. Test the 2 examples by using the following files as input:

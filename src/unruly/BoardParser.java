@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class BoardParser {
 
-    public Board parse(String path) throws IOException{
+    public static Board parse(String path) throws IOException{
         try(BufferedReader reader = new BufferedReader(new FileReader(path))){
 
             String line = reader.readLine().trim();
@@ -25,7 +25,7 @@ public class BoardParser {
 
     }
 
-    private void decode(Board board, String encoding) {
+    private static void decode(Board board, String encoding) {
         int pos = 0;
         int cols = board.cols;
 

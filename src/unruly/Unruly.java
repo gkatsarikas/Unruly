@@ -16,8 +16,7 @@ public class Unruly {
         int maxNodes = scanner.nextInt();
 
         try {
-            BoardParser parser = new BoardParser();
-            Board board = parser.parse(inputFilePath);
+            Board board = BoardParser.parse(inputFilePath);
 
             System.out.println("Initial Board:");
             Utils.printBoard(board);
